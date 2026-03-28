@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opiskelijaravintolat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="hero">
+  <div class="container">
+    <h1>Opiskelijaravintolat</h1>
+    <p>Löydä päivän ja viikon ruokalistat helposti</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="filters">
+    <h2>Hae ravintoloita</h2>
+    <form class="filter-form">
+      <input type="text" placeholder="Hae ravintolan nimellä..." />
+
+      <select>
+        <option>Kaikki kaupungit</option>
+        <option>Helsinki</option>
+        <option>Espoo</option>
+        <option>Vantaa</option>
+      </select>
+
+      <select>
+        <option>Kaikki palveluntarjoajat</option>
+        <option>Sodexo</option>
+        <option>Compass Group</option>
+        <option>Juvenes</option>
+      </select>
+
+      <button type="submit">Hae</button>
+    </form>
+  </section>
+
+  <section class="restaurant-section">
+    <h2>Ravintolat</h2>
+
+    <div class="restaurant-grid">
+      <article class="restaurant-card">
+        <h3>Metropolia Myyrmäki</h3>
+        <p class="location">Vantaa</p>
+        <p class="provider">Palveluntarjoaja: Sodexo</p>
+
+        <div class="card-buttons">
+          <button>Päivän ruokalista</button>
+          <button class="secondary">Viikon ruokalista</button>
+        </div>
+      </article>
+
+      <article class="restaurant-card">
+        <h3>Arcada</h3>
+        <p class="location">Helsinki</p>
+        <p class="provider">Palveluntarjoaja: Compass Group</p>
+
+        <div class="card-buttons">
+          <button>Päivän ruokalista</button>
+          <button class="secondary">Viikon ruokalista</button>
+        </div>
+      </article>
+
+      <article class="restaurant-card">
+        <h3>Aalto Töölö</h3>
+        <p class="location">Helsinki</p>
+        <p class="provider">Palveluntarjoaja: Juvenes</p>
+
+        <div class="card-buttons">
+          <button>Päivän ruokalista</button>
+          <button class="secondary">Viikon ruokalista</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="menu-preview">
+    <h2>Ruokalista</h2>
+    <div class="menu-box">
+      <h3>Päivän ruuat</h3>
+      <ul>
+        <li>Kasvislasagne</li>
+        <li>Broilerikeitto</li>
+        <li>Salaattipöytä</li>
+        <li>Kahvi / tee</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Opiskelijaravintolat</p>
+</footer>
+</body>
+</html>
