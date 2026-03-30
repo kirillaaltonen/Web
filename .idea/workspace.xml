@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1836e360-f21f-473e-a9c0-2fbb0cf05ade" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/harjoittelu/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week2_JS/dom-assignments/t3/t3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2_JS/ajax-assignments/t1/t1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2_JS/ajax-assignments/t1/t1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2_JS/ajax-assignments/t2/t2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2_JS/ajax-assignments/t2/t2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,6 +43,9 @@
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -93,6 +98,8 @@
       <recent name="C:\Users\alokas\Desktop\web\week1_JS\recap1_task_3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alokas\Desktop\web\week2_JS\ajax-assignments\t2" />
+      <recent name="C:\Users\alokas\Desktop\web\week2_JS\event-assignments" />
       <recent name="C:\Users\alokas\Desktop\web\week2_JS" />
       <recent name="C:\Users\alokas\Desktop\web\web1" />
     </key>
@@ -116,7 +123,7 @@
       <workItem from="1774310321697" duration="11000" />
       <workItem from="1774651554074" duration="3724000" />
       <workItem from="1774704788591" duration="6007000" />
-      <workItem from="1774861944043" duration="11415000" />
+      <workItem from="1774861944043" duration="14042000" />
     </task>
     <task id="LOCAL−00001" summary="commit">
       <option name="closed" value="true" />
@@ -132,7 +139,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1774197328618</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="commit">
+      <option name="closed" value="true" />
+      <created>1774901241629</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1774901241629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
