@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1836e360-f21f-473e-a9c0-2fbb0cf05ade" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/public_html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/harjoittelu/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week2_JS/dom-assignments/t3/t3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -56,6 +56,7 @@
     &quot;JavaScript Debug.example.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.script.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -79,6 +80,7 @@
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\alokas\\Desktop\\web\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -91,6 +93,7 @@
       <recent name="C:\Users\alokas\Desktop\web\week1_JS\recap1_task_3" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alokas\Desktop\web\week2_JS" />
       <recent name="C:\Users\alokas\Desktop\web\web1" />
     </key>
   </component>
@@ -112,6 +115,8 @@
       <workItem from="1774008097913" duration="10801000" />
       <workItem from="1774310321697" duration="11000" />
       <workItem from="1774651554074" duration="3724000" />
+      <workItem from="1774704788591" duration="6007000" />
+      <workItem from="1774861944043" duration="11415000" />
     </task>
     <task id="LOCAL−00001" summary="commit">
       <option name="closed" value="true" />
