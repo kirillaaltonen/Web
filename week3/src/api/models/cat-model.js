@@ -40,5 +40,4 @@ const addCat = (cat) => {
 
     return { cat_id: newId };
 };
-
 export { listAllCats, findCatById, addCat };
