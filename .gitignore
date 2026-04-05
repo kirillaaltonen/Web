@@ -1,5 +1,5 @@
-.vscode
-.idea
 node_modules
-.DS_Store
 .env
+.idea
+week3/uploads/*
+!week3/uploads/.gitkeep
