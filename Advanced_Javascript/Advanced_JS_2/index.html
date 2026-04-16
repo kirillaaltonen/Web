@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .select-wrapper {
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+      font-weight: 600;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #667eea;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: border-color 0.3s;
+    }
+
+    select:hover {
+      border-color: #764ba2;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #764ba2;
+      box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Filter Buttons */
+    .filter-wrapper {
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    .filter-wrapper label {
+      margin-bottom: 15px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: 2px solid #667eea;
+      background-color: white;
+      color: #667eea;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+
+    .filter-btn:hover {
+      background-color: #667eea;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .filter-btn.active {
+      background-color: #667eea;
+      color: white;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+    }
+
+    /* Error Message */
+    .error-message {
+      display: none;
+      background-color: #fee;
+      border: 2px solid #f88;
+      color: #c33;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      animation: slideDown 0.3s ease-out;
+      font-weight: 500;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #667eea;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+      cursor: pointer;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideIn 0.3s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+    }
+
+    .modal h1 {
+      color: #667eea;
+      margin-bottom: 20px;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .modal h2 {
+      color: #764ba2;
+      margin-top: 25px;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .modal p {
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .modal ul {
+      list-style-position: inside;
+      margin-left: 15px;
+    }
+
+    .modal li {
+      color: #666;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .empty-message {
+      text-align: center;
+      color: #999;
+      padding: 40px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Restaurant Menu Explorer</h1>
+    
+    <!-- Error Message -->
+    <div id="errorMessage" class="error-message"></div>
+    
+    <div class="select-wrapper">
+      <label for="restaurantSelect">Select a Restaurant:</label>
+      <select id="restaurantSelect">
+        <option value="">-- Choose a restaurant --</option>
+      </select>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-wrapper">
+      <label>Filter by Company:</label>
+      <div class="filter-buttons">
+        <button class="filter-btn" data-company="sodexo">Sodexo</button>
+        <button class="filter-btn" data-company="compass">Compass</button>
+      </div>
+    </div>
+
+    <table id="restaurantTable">
+      <tr>
+        <th>Name</th>
+        <th>Company</th>
+      </tr>
+      <tr>
+        <td colspan="2" class="empty-message">Select a restaurant or use filters to view details</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Modal for showing restaurant details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Import main.js as ES6 module -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
