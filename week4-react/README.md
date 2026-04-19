@@ -16,7 +16,7 @@ It demonstrates:
 ## Live Demo
 
 Open the app here:
-https://your-app.netlify.app
+https://glistening-sable-d34224.netlify.app/
 
 ## GitHub
 
