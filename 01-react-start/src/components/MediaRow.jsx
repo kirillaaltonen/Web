@@ -1,10 +1,8 @@
-const MediaRow = (props) => {
-    const { item } = props;
-
+const MediaRow = ({ item }) => {
     return (
         <tr>
             <td>
-                <img src={item.thumbnail} alt={item.title} />
+                <img src={item.thumbnail} alt={item.title} width="120" />
             </td>
             <td>{item.title}</td>
             <td>{item.description}</td>
