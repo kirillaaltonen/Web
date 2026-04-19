@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import MediaRow from './MediaRow';
-import SingleView from './SingleView';
+import MediaRow from '../components/MediaRow.jsx';
 
 const Home = () => {
-    const [selectedItem, setSelectedItem] = useState(null);
-
     const mediaArray = [
         {
             media_id: 8,
@@ -13,8 +9,8 @@ const Home = () => {
             thumbnail: 'https://i.redd.it/9odfz0kwy2i21.jpg',
             filesize: 170469,
             media_type: 'image/jpeg',
-            title: 'React 1 pic',
-            description: 'react meme! ',
+            title: 'Meme',
+            description: 'React meme 1',
             created_at: '2024-01-07T20:49:34.000Z',
         },
         {
@@ -24,8 +20,8 @@ const Home = () => {
             thumbnail: 'https://i.ytimg.com/vi/rtQKP1we-Dk/maxresdefault.jpg',
             filesize: 1002912,
             media_type: 'image/jpeg',
-            title: 'React 1 pic',
-            description: 'another react meme lessgo',
+            title: 'Meme',
+            description: 'React meme 2',
             created_at: '2024-01-07T21:32:27.000Z',
         },
         {
@@ -45,11 +41,6 @@ const Home = () => {
     return (
         <>
             <h2>My Media</h2>
-
-            {selectedItem && (
-                <SingleView item={selectedItem} setSelectedItem={setSelectedItem} />
-            )}
-
             <table>
                 <thead>
                 <tr>
@@ -62,15 +53,9 @@ const Home = () => {
                     <th>Action</th>
                 </tr>
                 </thead>
-
                 <tbody>
                 {mediaArray.map((item) => (
-                    <MediaRow
-                        key={item.media_id}
-                        item={item}
-                        selectedItem={selectedItem}
-                        setSelectedItem={setSelectedItem}
-                    />
+                    <MediaRow key={item.media_id} item={item} />
                 ))}
                 </tbody>
             </table>
