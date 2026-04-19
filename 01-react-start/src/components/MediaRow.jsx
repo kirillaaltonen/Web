@@ -1,4 +1,4 @@
-const MediaRow = ({ item }) => {
+const MediaRow = ({ item, setSelectedItem }) => {
     return (
         <tr>
             <td>
@@ -9,6 +9,9 @@ const MediaRow = ({ item }) => {
             <td>{new Date(item.created_at).toLocaleString('fi-FI')}</td>
             <td>{item.filesize}</td>
             <td>{item.media_type}</td>
+            <td>
+                <button onClick={() => setSelectedItem(item)}>View</button>
+            </td>
         </tr>
     );
 };

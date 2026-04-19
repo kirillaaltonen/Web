@@ -1,39 +1,43 @@
+import { useState } from 'react';
 import MediaRow from './MediaRow';
+import SingleView from './SingleView';
 
 const Home = () => {
+    const [selectedItem, setSelectedItem] = useState(null);
+
     const mediaArray = [
         {
             media_id: 8,
             user_id: 5,
             filename: 'https://placehold.co/1200x800?text=Pic1',
-            thumbnail: 'https://media.geeksforgeeks.org/wp-content/uploads/20260109124745578888/balanced_scorecard.webp',
+            thumbnail: 'https://i.redd.it/9odfz0kwy2i21.jpg',
             filesize: 170469,
             media_type: 'image/jpeg',
-            title: 'Picture 1',
-            description: 'React pic 3',
+            title: 'React 1 pic',
+            description: 'react meme! ',
             created_at: '2024-01-07T20:49:34.000Z',
         },
         {
             media_id: 9,
             user_id: 7,
             filename: 'https://placehold.co/800x600?text=Pic2',
-            thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s',
+            thumbnail: 'https://i.ytimg.com/vi/rtQKP1we-Dk/maxresdefault.jpg',
             filesize: 1002912,
             media_type: 'image/jpeg',
-            title: 'Picture 2',
-            description: 'React pic 2',
+            title: 'React 1 pic',
+            description: 'another react meme lessgo',
             created_at: '2024-01-07T21:32:27.000Z',
         },
         {
             media_id: 17,
             user_id: 2,
             filename:
-                'http://distribution.bbb3d.renderfarming.net/video/mp4/bbb_sunflower_1080p_60fps_normal.mp4',
-            thumbnail: 'https://miro.medium.com/v2/resize:fit:1400/0*hZK1xVsaAFVjlEyB.jpeg',
+                'https://www.w3schools.com/html/mov_bbb.mp4',
+            thumbnail: 'https://pet-health-content-media.chewy.com/wp-content/uploads/2025/04/25190642/202504Hub-Small-Pet-Rabbit-SM-scaled-1.jpg',
             filesize: 1236616,
             media_type: 'video/mp4',
-            title: 'Picture 3',
-            description: 'React pic 1',
+            title: 'Bunny',
+            description: 'Butterflies fly around the bunny.',
             created_at: '2024-01-07T20:48:13.000Z',
         },
     ];
@@ -41,6 +45,11 @@ const Home = () => {
     return (
         <>
             <h2>My Media</h2>
+
+            {selectedItem && (
+                <SingleView item={selectedItem} setSelectedItem={setSelectedItem} />
+            )}
+
             <table>
                 <thead>
                 <tr>
@@ -50,12 +59,18 @@ const Home = () => {
                     <th>Created</th>
                     <th>Size</th>
                     <th>Type</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 {mediaArray.map((item) => (
-                    <MediaRow key={item.media_id} item={item} />
+                    <MediaRow
+                        key={item.media_id}
+                        item={item}
+                        selectedItem={selectedItem}
+                        setSelectedItem={setSelectedItem}
+                    />
                 ))}
                 </tbody>
             </table>
