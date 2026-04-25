@@ -1,21 +1,9 @@
 import MediaRow from '../components/MediaRow.jsx';
-import { useEffect, useState } from 'react';
-import { fetchData } from '../utils/fetchData';
+import { useMedia } from '../hooks/apiHooks';
 
 const Home = () => {
-    const [mediaArray, setMediaArray] = useState([]);
-    useEffect(() => {
-        const getMedia = async () => {
-            try {
-                const json = await fetchData('test.json');
-                setMediaArray(json);
-            } catch (error) {
-                console.error(error);
-            }
-        };
+    const { mediaArray } = useMedia();
 
-        getMedia();
-    }, []);
     return (
         <>
             <h2>My Media</h2>
