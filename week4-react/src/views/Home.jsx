@@ -6,19 +6,21 @@ const Home = () => {
 
     return (
         <>
-            <h2>My Media</h2>
-            <table>
+            <h2 className="mb-4 text-3xl font-bold">My Media</h2>
+
+            <table className="w-full border-collapse border border-black">
                 <thead>
                 <tr>
-                    <th>Thumbnail</th>
-                    <th>Title</th>
-                    <th>Description</th>
-                    <th>Created</th>
-                    <th>Size</th>
-                    <th>Type</th>
-                    <th>Action</th>
+                    <th className="border border-black p-2 align-top">Thumbnail</th>
+                    <th className="border border-black p-2 align-top">Title</th>
+                    <th className="border border-black p-2 align-top">Description</th>
+                    <th className="border border-black p-2 align-top">Created</th>
+                    <th className="border border-black p-2 align-top">Size</th>
+                    <th className="border border-black p-2 align-top">Type</th>
+                    <th className="border border-black p-2 align-top">Action</th>
                 </tr>
                 </thead>
+
                 <tbody>
                 {mediaArray.map((item) => (
                     <MediaRow key={item.media_id} item={item} />
