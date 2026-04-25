@@ -13,7 +13,7 @@ It demonstrates:
 * Single item view (image/video)
 * Navigation (Home, Profile, Upload)
 
-## Live Demo
+## Live Demonstration
 
 Open the app here:
 https://glistening-sable-d34224.netlify.app/
