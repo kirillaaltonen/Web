@@ -1,13 +1,16 @@
 import useForm from '../hooks/formHooks';
+import { useUserContext } from '../hooks/contextHooks';
 
 const LoginForm = () => {
+    const { handleLogin } = useUserContext();
+
     const initValues = {
         username: '',
         password: '',
     };
 
     const doLogin = () => {
-        console.log(inputs);
+        handleLogin(inputs);
     };
 
     const { inputs, handleInputChange, handleSubmit } =
@@ -32,7 +35,5 @@ const LoginForm = () => {
         </>
     );
 };
-const doLogin = () => {
-    console.log(inputs);
-};
+
 export default LoginForm;
