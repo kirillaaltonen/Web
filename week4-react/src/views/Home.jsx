@@ -1,43 +1,21 @@
 import MediaRow from '../components/MediaRow.jsx';
+import { useEffect, useState } from 'react';
+import { fetchData } from '../utils/fetchData';
 
 const Home = () => {
-    const mediaArray = [
-        {
-            media_id: 8,
-            user_id: 5,
-            filename: 'https://placehold.co/1200x800?text=Pic1',
-            thumbnail: 'https://i.redd.it/9odfz0kwy2i21.jpg',
-            filesize: 170469,
-            media_type: 'image/jpeg',
-            title: 'Meme',
-            description: 'React meme 1',
-            created_at: '2024-01-07T20:49:34.000Z',
-        },
-        {
-            media_id: 9,
-            user_id: 7,
-            filename: 'https://placehold.co/800x600?text=Pic2',
-            thumbnail: 'https://i.ytimg.com/vi/rtQKP1we-Dk/maxresdefault.jpg',
-            filesize: 1002912,
-            media_type: 'image/jpeg',
-            title: 'Meme',
-            description: 'React meme 2',
-            created_at: '2024-01-07T21:32:27.000Z',
-        },
-        {
-            media_id: 17,
-            user_id: 2,
-            filename:
-                'https://www.w3schools.com/html/mov_bbb.mp4',
-            thumbnail: 'https://pet-health-content-media.chewy.com/wp-content/uploads/2025/04/25190642/202504Hub-Small-Pet-Rabbit-SM-scaled-1.jpg',
-            filesize: 1236616,
-            media_type: 'video/mp4',
-            title: 'Bunny',
-            description: 'Butterflies fly around the bunny.',
-            created_at: '2024-01-07T20:48:13.000Z',
-        },
-    ];
+    const [mediaArray, setMediaArray] = useState([]);
+    useEffect(() => {
+        const getMedia = async () => {
+            try {
+                const json = await fetchData('test.json');
+                setMediaArray(json);
+            } catch (error) {
+                console.error(error);
+            }
+        };
 
+        getMedia();
+    }, []);
     return (
         <>
             <h2>My Media</h2>
