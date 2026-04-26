@@ -1,24 +1,26 @@
-# Week 4 - React Routing
+# Week 5 - Tailwind CSS
 
-This project is a React application built with Vite.
-It demonstrates:
+This project demonstrates:
 
-* React components
-* State management
-* React Router (routing between pages)
+- React components
+- React Router
+- Context
+- Custom hooks
+- File upload
+- Tailwind CSS styling
 
 ## Features
 
-* Media list view
-* Single item view (image/video)
-* Navigation (Home, Profile, Upload)
+- Media list view
+- Single item view
+- Login / Logout
+- Upload page
+- Tailwind styled layout and media table
 
-## Live Demonstration
+## Live Demo
 
-Open the app here:
-https://glistening-sable-d34224.netlify.app/
+Open the app here: https://withtailwind.netlify.app/
 
 ## GitHub
 
-Repository:
-https://github.com/kirillaaltonen/Web/tree/routing/week4-react
+Repository: https://github.com/kirillaaltonen/Web/tree/tailwind/week4-react
