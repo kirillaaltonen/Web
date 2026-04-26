@@ -1,26 +1,25 @@
-# Week 4 - React Routing
+# Week 5 - File Upload
 
-This project is a React application built with Vite.
-It demonstrates:
+This project demonstrates:
 
-* React components
-* State management
-* React Router (routing between pages)
+- React components
+- React Router
+- Context
+- Custom hooks
+- File upload form
+- FormData
 
 ## Features
 
-* Media list view
-* Single item view (image/video)
-* Navigation (Home, Profile, Upload)
+- Media list view
+- Login / Logout
+- Upload page
+- File preview before upload
 
-## Live Demonstration
+## Live Demo
 
-Open the app here:
-https://glistening-sable-d34224.netlify.app/
-
-Open [Tailwind app] https://singular-unicorn-e9804c.netlify.app/ to view it in the browser.
+Open the app here: https://withupload.netlify.app/
 
 ## GitHub
 
-Repository:
-https://github.com/kirillaaltonen/Web/tree/routing/week4-react
+Repository: https://github.com/kirillaaltonen/Web/tree/upload/week4-react
