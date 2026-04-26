@@ -1,24 +1,24 @@
-# Week 4 - React Routing
+# Week 5 - React Context
 
-This project is a React application built with Vite.
-It demonstrates:
+This project demonstrates:
 
-* React components
-* State management
-* React Router (routing between pages)
+- React components
+- React Router
+- React Context
+- Shared user state
+- Protected routes
 
 ## Features
 
-* Media list view
-* Single item view (image/video)
-* Navigation (Home, Profile, Upload)
+- Media list view
+- Login / Logout
+- User context
+- Protected profile route
 
-## Live Demonstration
+## Live Demo
 
-Open the app here:
-https://glistening-sable-d34224.netlify.app/
+Open the app here: https://withhcontext.netlify.app/
 
 ## GitHub
 
-Repository:
-https://github.com/kirillaaltonen/Web/tree/routing/week4-react
+Repository: https://github.com/kirillaaltonen/Web/tree/context/week4-react
